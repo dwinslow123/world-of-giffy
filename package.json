@@ -1,0 +1,19 @@
+{
+  "name": "world-of-giffy",
+  "version": "1.0.0",
+  "description": "Single page web application that displays a GIF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwinslow123/world-of-giffy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwinslow123/world-of-giffy/issues"
+  },
+  "homepage": "https://github.com/dwinslow123/world-of-giffy#readme"
+}
