@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	req.onload = function() {
 		if (req.status >= 200 && req.status < 400) {
 			data = JSON.parse(req.responseText).data.image_url;
-			document.getElementById('output').innerHTML = '<center><img src = "'+data+'" title="GIF from Giphy"></center>';
+			document.getElementById('output').innerHTML = '<img src = "'+data+'" title="GIF from Giphy">';
 		} else {
 			console.log('You made it Giphy, but there was an error :(');
 		}

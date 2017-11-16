@@ -1,0 +1,10 @@
+body {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#output {
+  width: 60%;
+  margin: 0 auto;
+}
