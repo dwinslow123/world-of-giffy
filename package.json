@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "harp server --port $PORT"
+    "start": "harp server --port $PORT",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,12 @@
   "bugs": {
     "url": "https://github.com/dwinslow123/world-of-giffy/issues"
   },
-  "homepage": "https://github.com/dwinslow123/world-of-giffy#readme",
+  "homepage": "https://dwinslow123.github.io/world-of-giffy",
   "dependencies": {
     "giphy-js-sdk-core": "^1.0.2",
     "harp": "*"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }
