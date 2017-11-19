@@ -12,7 +12,7 @@ const createCORSRequest = (method, url) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const url = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
+  const url = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
 
   const req = createCORSRequest('GET', url);
   if (!req) alert('CORS not supported');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   req.send();
   
   document.getElementById('btn').addEventListener('click', () => {
-  const url = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
+  const url = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
 
   const req = createCORSRequest('GET', url);
   if (!req) alert('CORS not supported');
