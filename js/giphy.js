@@ -1,28 +1,18 @@
-// const api = "http://api.giphy.com/v1/gifs/search";
-// const apiKey ="&api_key=dc6zaT0xFJmzc";
-// const query = "&q=rainbow";
+document.addEventListener('DOMContentLoaded', function () {
+	
+	req = new XMLHttpRequest;
+	req.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC', true);
+	
+	req.onload = function() {
+		if (req.status >= 200 && req.status < 400){
+      console.log(req.responseText);
+			data = JSON.parse(req.responseText).data.fixed_height_downsampled_url;
+			console.log(data);
+			document.getElementById("output").innerHTML = '<img src = "'+data+'"  title="GIF from Giphy">';
+		} else {
+			console.log('SOMETHING WENT WRONG! You reached Giphy, but the API returned an error!');
+		 }
+	};
 
-// const setup = () => {
-//   noCanvas();
-//   const url = api + apiKey + query;
-//   loadJSON(url, gotData);
-// }
-
-// const gotData = (data) => {
-//   for (let i = 0; i < giphy.data.length; i++) {
-//     createImg(giphy.data.data[0].images.original.url);
-// 	}
-// }
-
-const GphApiClient = require('giphy-js-sdk-core');
-const client = GphApiClient("aPvjKyc7BnhDtjxCZ0lmC5OWxmoMyRto");
-
-client.search('gifs', { "q": "banana" })
-  .then((res) => {
-    res.data.forEach((gif) => {
-      console.log(gif);
-    })
-  })
-  .catch((err) => {
-    console.log(err)
-  });
+  req.send();
+});

@@ -1,10 +1,28 @@
 body {
-  width: 60%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
-#output {
+#output { 
   width: 60%;
   margin: 0 auto;
+  padding: 4rem;
+}
+
+#output img {
+  width: 100%;
+}
+
+button {
+  width: 45%;
+  height: 4rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #133769;
 }
