@@ -1,3 +1,4 @@
+// This is to prevent mixed active content
 const createCORSRequest = (method, url) => {
   req = new XMLHttpRequest();
   if ("withCredentials" in req) {
@@ -11,13 +12,16 @@ const createCORSRequest = (method, url) => {
   return req;
 }
 
+
+// Waits for the page to load before executing
 document.addEventListener('DOMContentLoaded', () => {
-  const url = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
+  const url = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
 
   const req = createCORSRequest('GET', url);
   if (!req) alert('CORS not supported');
 
-	req.onload = function() {
+  // 
+	req.onload = () => {
 		if (req.status >= 200 && req.status < 400){
       console.log(req.responseText);
 			const data = JSON.parse(req.responseText).data.fixed_height_downsampled_url;
@@ -31,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
   req.send();
   
   document.getElementById('btn').addEventListener('click', () => {
-  const url = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
+  const url = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC'
 
   const req = createCORSRequest('GET', url);
   if (!req) alert('CORS not supported');
-  
+
     req.onload = () => {
       if (req.status >= 200 && req.status < 400){
         console.log(req.responseText);
