@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <title>World of Giffy!</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     <script src="js/giphy.js"></script>
   </head>
 
   <body>
-    <div id="output"></div>
-    <button id="btn">Refresh your GIF!</button>
+    <h1>Welcome to the World of Giffy!</h1>
+    <div class="output">
+          <form class="gif-form">
+            <input 
+              type="text"
+              id="form-value"
+              class="search-input-rounded"
+              placeholder="Search for a GIF"
+            />
+            <button type="submit" class="search">Submit</button>
+            <input 
+              type="reset"
+              id="reset"
+              value="Reset" 
+            />
+          </form>
+          <div class="display animated bounceIn">
+            <img id="gif" src=""/>
+
+          </div>
+      </div>
   </body>
 
 </html>
