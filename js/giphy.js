@@ -12,7 +12,7 @@ $(document).ready(() => {
           const queryURL = url + userInput + apiKey;
   
           $.ajax({url: queryURL, method: 'GET'}).done( (response) => {
-              const giphyURL = response.data[Math.floor(Math.random()) * 25].images.fixed_height.url;              
+              const giphyURL = response.data[Math.floor(Math.random()) * 25].images.original.url;              
             $gif.attr('src', giphyURL);
           });
          $reset.on('click', () => {
