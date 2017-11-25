@@ -4,15 +4,15 @@ $(document).ready(() => {
   const $gif = $('#gif');
   const $reset = $('#reset');
   const apiKey = '&api_key=dc6zaTOxFJmzC'
-  const url = 'http://api.giphy.com/v1/gifs/search?q='
+  const url = 'https://api.giphy.com/v1/gifs/search?q='
 
         $search.on('click', () => {
-        let userInput = $formValue.val().trim();  
+        let userInput = $formValue.val().trim();
           userInput = userInput.replace(/ /g, "+");
           const queryURL = url + userInput + apiKey;
-  
+
           $.ajax({url: queryURL, method: 'GET'}).done( (response) => {
-              const giphyURL = response.data[Math.floor(Math.random()) * 25].images.original.url;              
+              const giphyURL = response.data[Math.floor(Math.random()) * 25].images.original.url;
             $gif.attr('src', giphyURL);
           });
          $reset.on('click', () => {
