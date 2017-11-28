@@ -14,10 +14,10 @@ $(document).ready(() => {
           $.ajax({url: queryURL, method: 'GET'}).done( (response) => {
               const giphyURL = response.data[Math.floor(Math.random()) * 25].images.original.url;
             $gif.attr('src', giphyURL);
-          });
+          })
          $reset.on('click', () => {
             $gif.attr("src",'');
-          });
+          })
           return false;
         })
       });

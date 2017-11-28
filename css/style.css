@@ -25,6 +25,7 @@ body {
   align-items: center;
   border: 1.25px solid black;
   border-radius: 5px;
+  box-shadow: 0.10rem 0.10rem 0.10rem #000000;
 }
 
 .gif-form {
